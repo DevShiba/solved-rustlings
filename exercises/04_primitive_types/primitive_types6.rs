@@ -7,6 +7,7 @@ mod tests {
     #[test]
     fn indexing_tuple() {
         let numbers = (1, 2, 3);
+        let second = numbers.1; // This accesses the second element of the tuple using index 1. That solves the exercise.
 
         // TODO: Use a tuple index to access the second element of `numbers`
         // and assign it to a variable called `second`.
