@@ -6,6 +6,9 @@ mod delicious_snacks {
     // use self::fruits::PEAR as ???;
     // use self::veggies::CUCUMBER as ???;
 
+    pub use self::fruits::PEAR as fruit; // Added `as fruit` to rename the import.
+    pub use self::veggies::CUCUMBER as veggie; // Added `as veggie` to rename the import. This solves the exercise.
+
     mod fruits {
         pub const PEAR: &str = "Pear";
         pub const APPLE: &str = "Apple";
