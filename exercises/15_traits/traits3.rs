@@ -3,7 +3,9 @@ trait Licensed {
     // implementors like the two structs below can share that default behavior
     // without repeating the function.
     // The default license information should be the string "Default license".
-    fn licensing_info(&self) -> String;
+    fn licensing_info(&self) -> String {
+        String::from("Default license") // This provides a default implementation for licensing_info. This solves the exercise.
+    }
 }
 
 struct SomeSoftware {

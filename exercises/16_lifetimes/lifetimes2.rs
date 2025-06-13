@@ -15,6 +15,6 @@ fn main() {
     {
         let string2 = String::from("xyz");
         result = longest(&string1, &string2);
+        println!("The longest string is '{result}'"); // Moved this line inside the inner scope to ensure `string2` is valid when used.
     }
-    println!("The longest string is '{result}'");
 }

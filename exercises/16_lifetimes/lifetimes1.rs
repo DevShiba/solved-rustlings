@@ -4,7 +4,9 @@
 // not own their own data. What if their owner goes out of scope?
 
 // TODO: Fix the compiler error by updating the function signature.
-fn longest(x: &str, y: &str) -> &str {
+fn longest<'a>(x: &'a str, y: &'a str) -> &'a str { 
+    // The function signature now includes a lifetime parameter `'a`, which
+    // indicates that both `x` and `y` are references with the same lifetime. 
     if x.len() > y.len() {
         x
     } else {
