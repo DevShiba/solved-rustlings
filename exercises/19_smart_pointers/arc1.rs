@@ -24,12 +24,15 @@ fn main() {
 
     // TODO: Define `shared_numbers` by using `Arc`.
     // let shared_numbers = ???;
+    let shared_numbers = Arc::new(numbers); // I used Arc::new to create a reference-counting pointer
 
     let mut join_handles = Vec::new();
 
     for offset in 0..8 {
         // TODO: Define `child_numbers` using `shared_numbers`.
         // let child_numbers = ???;
+
+        let child_numbers = Arc::clone(&shared_numbers); // I used Arc::clone to create a new reference-counting pointer for each thread
 
         let handle = thread::spawn(move || {
             let sum: u32 = child_numbers.iter().filter(|&&n| n % 8 == offset).sum();
