@@ -9,14 +9,14 @@ use std::collections::HashMap;
 fn fruit_basket() -> HashMap<String, u32> {
     // TODO: Declare the hash map.
     // let mut basket =
-    let mut basket = HashMap::new(); // This initializes an empty hash map to store the fruits and their counts.
+    let mut basket: HashMap<String, u32> = HashMap::new(); // This initializes an empty hash map to store the fruits and their counts.
 
     // Two bananas are already given for you :)
     basket.insert(String::from("banana"), 2);
 
     // TODO: Put more fruits in your basket.
 
-    basket.insert(String::from("banana"), 3); // Adding 3 more bananas to the basket, making a total of 5 bananas.
+    basket.insert(String::from("strawberry"), 3); // Adding 3 more bananas to the basket, making a total of 5 bananas.
     basket.insert(String::from("mango"), 1); // Adding 1 mango to the basket. That solves the exercise.
 
     basket
